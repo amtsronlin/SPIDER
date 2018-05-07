@@ -1,0 +1,23 @@
+<app-header></app-header>
+<!-- <mat-drawer-container class="example-container">
+  <mat-drawer class="col-md-1-5" mode="side" opened="true">Drawer content</mat-drawer>
+  <mat-drawer-content class="col-md-10"><router-outlet></router-outlet></mat-drawer-content>
+</mat-drawer-container> -->
+<mat-sidenav-container class="example-container">
+  <mat-sidenav class="col-md-1-5" mode="side" opened="true">
+    <p>
+      <a href="dashboard.html">Dashboard</a>
+    </p>
+    <p>
+      <a href="scopesearch.html">Scope</a>
+    </p>
+    <p>
+      <a href="wisearch.html?rtc=1">Artifact Relation</a>
+    </p>
+    <p>
+      <a href="preview.html">Preview</a>
+    </p>
+  </mat-sidenav>
+  <mat-sidenav-content class="col-md-10"><router-outlet></router-outlet></mat-sidenav-content>
+</mat-sidenav-container>
+<app-footer class="fixed-bottom"></app-footer>
