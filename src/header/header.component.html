@@ -1,0 +1,9 @@
+<!-- <mat-toolbar color="primary" *ngIf="isLoggedIn$ | async as isLoggedIn"> -->
+  <mat-toolbar color="primary">
+  <span>
+    <img style="max-height:50px;" src="assets/img/109704_white.png" /> SPIDER
+  </span>
+  <span class="fill-remaining-space"></span>
+  <button mat-button routerLink="login">Login</button>
+  <button mat-button (click)="onLogout()"><span class="glyphicon glyphicon-log-in"></span>Logout</button>
+</mat-toolbar>
