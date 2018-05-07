@@ -1,0 +1,59 @@
+        div[data-group=model] {
+            display: none;
+        }
+
+        .node-display {
+            border: 1px solid;
+            border-radius: 5px;
+            width: 110px;
+            height: 50px;
+            padding: 4px;
+            ;
+            padding-top: 12px;
+        }
+
+        .path {
+            vertical-align: middle;
+        }
+
+        .group-object,
+        .node-display,
+        .path {
+            display: inline-block;
+        }
+
+        .wiInput {
+            border: 0px;
+            width: 100px;
+        }
+
+        #popupRC {
+            z-index: 1;
+        }
+
+        .tab-content {
+            height: 500px;
+        }
+        
+        .add-attr {
+            margin: 5px;
+        }
+
+        #condSelect {
+            display: inline
+        }
+
+        .d-flex-attr {
+            width: 570px;
+            height: 450px;
+            border: 1px solid #e5e5e5;
+            border-radius: 5px;
+        }
+
+        .query-diagram-area {
+            height: 300px;
+            border: 1px solid #e5e5e5;
+            border-radius: 5px;
+            padding-left: 10px;
+            margin-bottom: 10px;
+        }
