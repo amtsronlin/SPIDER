@@ -1,0 +1,174 @@
+<!-- Modal -->
+<div class="modal fade" id="wiModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" ng-app="myApp"
+  ng-controller="myCtrl">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title" id="myModalLabel">WorkItem Attribute</h4>
+
+      </div>
+      <div class="modal-body">
+        <div role="tabpanel">
+          <!-- Nav tabs -->
+          <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active">
+              <a href="#conditionTab" ng-if="rtc == 1" aria-controls="conditionTab" role="tab" data-toggle="tab">Share Condition</a>
+              <a href="#conditionTab" ng-if="rtc == 2" aria-controls="conditionTab" role="tab" data-toggle="tab">Custome Condition</a>
+            </li>
+          </ul>
+          <!-- Tab panes -->
+          <div class="tab-content">
+
+            <div role="tabpanel" class="tab-pane active conditionTab1" id="conditionTab">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Descripstion</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Query 1</td>
+                    <td>Descripstion 1</td>
+                    <td>
+                      <div class="choose">
+                        <i class="fas fa-check-circle pull-right" aria-hidden="true"></i>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Query 2</td>
+                    <td>Descripstion 2</td>
+                    <td>
+                      <div class="choose">
+                        <i class="fas fa-check-circle pull-right" aria-hidden="true"></i>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Query 3</td>
+                    <td>Descripstion 3</td>
+                    <td>
+                      <div class="choose">
+                        <i class="fas fa-check-circle pull-right" aria-hidden="true"></i>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div role="tabpanel" class="tab-pane active conditionTab2" id="conditionTab">
+              <form class="form-inline">
+                <label>Add Conditions:</label>
+                <select class="selectpicker" id="condSelect" data-live-search="true">
+                  <option value=""></option>
+                  <option value="status">status</option>
+                  <option value="own">own by</option>
+                  <option value="create">create by</option>
+                  <option value="due">due date</option>
+                  <option value="file">file against</option>
+                </select>
+
+                <div class="form-check">
+                  <input class="form-check-input" name="group20" type="radio" id="radio120" checked="checked">
+                  <label class="form-check-label" for="radio120">AND</label>
+                </div>
+
+                <div class="form-check">
+                  <input class="form-check-input" name="group20" type="radio" id="radio121">
+                  <label class="form-check-label" for="radio121">OR</label>
+                </div>
+              </form>
+              <div class="d-flex flex-column d-flex-attr">
+                <div class="add-attr" id="add-attr1"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary save">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="myModal" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Relation</h4>
+      </div>
+      <input type="hidden" name="index" id="index" value="" />
+      <div class="d-flex flex-column mb-3 justify-content-center align-items-center">
+        <div class="p-2">
+          <input type="radio" name="optradio" value="require" checked>
+          <label>
+            Require
+          </label>
+          <input type="radio" name="optradio" value="option">
+          <label>
+            Option
+          </label>
+        </div>
+        <div class="p-2">
+          <select class="selectpicker" multiple data-live-search="true">
+            <option value='track'>Track</option>
+            <option value='parent'>Parent</option>
+            <option value='relate'>Relate</option>
+            <option value='implement'>Implement</option>
+            <option value='child'>Child</option>
+          </select>
+        </div>
+        <div class="p-2">
+          <button type="button" class="btn btn-success" data-dismiss="modal">OK</button>
+          <button class="btn btn-danger" onclick="remove(this)" data-dismiss="modal" aria-label="Close">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- context menu -->
+<div id="popupRC" style="display:none;" class="panel panel-primary  ">
+  <i data-toggle="modal" data-target="#wiModal" class="fa fa-plus-square" aria-hidden="true"></i>
+  <i class="fa fa-arrow-right" aria-hidden="true"></i>
+</div>
+
+<div class="card">
+  <h1 class="card-title">Artifact Relation</h1>
+  <div class="query-diagram-area">
+    <div id="node1-dom" class="group-object">
+      <div class="node-display" id="node1-display" title="Work Item" class="context" data-toggle="context" data-target="#context-menu">
+        <input class="wiInput" type="text" value="wi1" />
+      </div>
+      <div class="path path-right" data-index='2' data-toggle="modal" data-target="#myModal">
+        <svg width="90px" height="100px">
+          <g>
+            <defs>
+              <marker id="marker" viewBox="0 0 20 20" refX="11" refY="10" markerWidth="10" markerHeight="10" orient="auto">
+                <path d="M 1 5 L 11 10 L 1 15 Z" style="fill: black; stroke-width: 1px; stroke-linecap: round; stroke-dasharray: 10000, 1; stroke: black;"></path>
+              </marker>
+            </defs>
+            <text class="djs-label-u" style="font-family: Arial, sans-serif; font-size: 11px;"></text>
+            <line x1="0" y1="50" x2="90" y2="50" marker-end="url(#marker)" stroke="black" stroke-width="2" />
+            <text class="djs-label-d" style="font-family: Arial, sans-serif; font-size: 11px;"></text>
+          </g>
+        </svg>
+      </div>
+    </div>
+    <div id="node2-dom" class="group-object"></div>
+  </div>
+  <a href="scopesearch.html" id="btnNext" class="btn btn-success">Back</a>
+  <a href="preview.html" id="btnNext" class="btn btn-success pull-right">Next</a>
+</div>
+
