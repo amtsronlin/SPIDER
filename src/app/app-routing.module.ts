@@ -9,6 +9,8 @@ import { HomeLayoutComponent } from './layouts/home-layout/home-layout.component
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ScopeComponent } from './scope/scope.component';
 import { RelationComponent } from './relation/relation.component';
+import { PreviewComponent } from './preview/preview.component';
+import { ResultComponent } from './result/result.component';
 
 const routes: Routes = [
   {
@@ -24,7 +26,9 @@ const routes: Routes = [
         path: 'scope',
         component: ScopeComponent   // {3}
       },
-      { path: 'relation', component: RelationComponent }
+      { path: 'relation', component: RelationComponent },
+      { path: 'preview', component: PreviewComponent },
+      { path: 'result', component: ResultComponent }
     ]
   },
   {
