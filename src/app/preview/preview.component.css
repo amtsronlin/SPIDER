@@ -1,0 +1,15 @@
+    .clear {
+      clear: both;
+      padding-top: 20px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    .fa-sign-out-alt {
+      color: whitesmoke;
+      margin-right: 3px;
+    }
+
+    .fixed {
+      width: 300px;
+    }
