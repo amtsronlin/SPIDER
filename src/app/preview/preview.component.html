@@ -1,0 +1,139 @@
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Column display</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <input type="hidden" name="index" id="index" value="" />
+        <div class="d-flex flex-column mb-3 justify-content-center align-items-center">
+          <div class="p-2">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="Name" id="defaultCheck1">
+              <label class="form-check-label" for="defaultCheck1">
+                Name
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="Type" id="defaultCheck2">
+              <label class="form-check-label" for="defaultCheck2">
+                Project
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="Summary" id="defaultCheck2">
+              <label class="form-check-label" for="defaultCheck2">
+                ID
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="Own by" id="defaultCheck2">
+              <label class="form-check-label" for="defaultCheck2">
+                Type
+              </label>
+            </div>
+          </div>
+          <div class="p-2">
+            <button type="button" class="btn btn-success" data-dismiss="modal">OK</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <h1>Preview</h1>
+  <div class="clear">
+    <div class="card">
+      <div class="card-header">
+        Details
+      </div>
+      <div class="card-body">
+        <form>
+          <div class="form-group row">
+            <label for="report" class="col-sm-2 col-form-label">Report Name</label>
+            <i class="fa fa-asterisk text-danger"></i>
+            <div class="col-sm-5">
+              <input type="text" class="form-control" id="report" placeholder="Report name">
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <table class="table table-hover">
+      <thead class="thead-light">
+        <tr>
+          <th scope="col">Server</th>
+          <th scope="col">Project Area</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">rb-alm-28-p.de.bosch.com</th>
+          <td>CATS</td>
+
+        </tr>
+        <tr>
+          <th scope="row">rb-alm-28-p.de.bosch.com</th>
+          <td>SPIDER</td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="table table-hover">
+      <thead class="thead-light">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Artifact</th>
+          <th scope="col">Relation</th>
+          <th scope="col">Relation Attribute</th>
+          <th scope="col">Condition</th>
+          <th scope="col" class="fixed">Column</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>wi 1</td>
+          <td>Track by wi2, Parent of wi2</td>
+          <td>Require</td>
+          <td>own by Mary or due to 4/18/2018</td>
+          <td>Name</td>
+          <td>
+            <button class="btn btn-default float-right column" data-toggle="modal" data-target="#myModal">
+              <i class="fas fa-plus-circle" aria-hidden="true"></i>
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>wi 2</td>
+          <td>Relate to wi3</td>
+          <td>Option</td>
+          <td>create by Tom and file against ALM </td>
+          <td>Name</td>
+          <td>
+            <button class="btn btn-default float-right column" data-toggle="modal" data-target="#myModal">
+              <i class="fas fa-plus-circle" aria-hidden="true"></i>
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>wi 3</td>
+          <td></td>
+          <td></td>
+          <td>Status Done, In progress</td>
+          <td>Name</td>
+          <td>
+            <button class="btn btn-default float-right column" data-toggle="modal" data-target="#myModal">
+              <i class="fas fa-plus-circle" aria-hidden="true"></i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <a class="btn btn-success" [routerLink]="['/wisearch']" [queryParams]="{rtc : 1}" role="button">Back</a>
+  <a class="btn btn-success float-right" [routerLink]="['/result']" role="button">Run report</a>
