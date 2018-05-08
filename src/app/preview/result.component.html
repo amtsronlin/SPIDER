@@ -1,0 +1,726 @@
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Column display</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <input type="hidden" name="index" id="index" value="" />
+        <div class="d-flex flex-column mb-3 justify-content-center align-items-center">
+          <div class="p-2">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="Name" id="defaultCheck1">
+              <label class="form-check-label" for="defaultCheck1">
+                Name
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="Type" id="defaultCheck2">
+              <label class="form-check-label" for="defaultCheck2">
+                Type
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="Summary" id="defaultCheck2">
+              <label class="form-check-label" for="defaultCheck2">
+                Summary
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="Own by" id="defaultCheck2">
+              <label class="form-check-label" for="defaultCheck2">
+                Own by
+              </label>
+            </div>
+          </div>
+          <div class="p-2">
+            <button type="button" class="btn btn-success" data-dismiss="modal">OK</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <h1>Result</h1>
+    <div class="clear">
+      <div class="card">
+        <div class="card-header">
+          Details
+        </div>
+        <div class="card-body">
+          <form>
+            <div class="form-group row">
+              <label for="report" class="col-sm-2 col-form-label">Workitems</label>
+              <div class="col-sm-5">
+                <select name='wi' class="form-control">
+                  <option value="1">Work Item 1</option>
+                  <option value="2">Work Item 2</option>
+                  <option value="3">Work Item 3</option>
+                </select>
+              </div>
+            </div>
+            <div class="query-diagram-area1">
+              <div class="d-flex flex-column bd-highlight mb-3">
+                <div class="p-2 bd-highlight">
+                  <div id="node1-dom" class="group-object">
+                    <div class="panel panel-default">
+                      <div class="panel-heading">WI 1</div>
+                      <div class="panel-body">
+                        <table class="table table-hover">
+                          <thead class="thead-light">
+                            <tr>
+                              <th scope="col-sm-2">Project</th>
+                              <th scope="col-sm-2">ID</th>
+                              <th scope="col-sm-2">Name</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>BSW Solutions</td>
+                              <td>
+                                <a>124696</a>
+                              </td>
+                              <td>
+                                <a href="view.html?wi=1" target="_blank"> Sprint 1</a>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="panel panel-default arrow">
+                      <div class="panel-body">Childern, track</div>
+                    </div>
+                    <div class="panel panel-default">
+                      <div class="panel-heading">WI 2</div>
+                      <div class="panel-body">
+                        <table class="table table-hover">
+                          <thead class="thead-light">
+                            <tr>
+                              <th scope="col-sm-2">Project</th>
+                              <th scope="col-sm-2">ID</th>
+                              <th scope="col-sm-2">Name</th>
+                              <th scope="col-sm-2">Status</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>BSW Solutions</td>
+                              <td>
+                                <a>124653</a>
+                              </td>
+                              <td>
+                                <a href="view.html?wi=2" target="_blank"> Create UI Mockups</a>
+                              </td>
+                              <td>
+                                <a>New</a>
+                              </td>
+
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="panel panel-default arrow">
+                      <div class="panel-body">Childern, track</div>
+                    </div>
+                    <div class="panel panel-default">
+                      <div class="panel-heading">WI 3</div>
+                      <div class="panel-body">
+                        <table class="table table-hover">
+                          <thead class="thead-light">
+                            <tr>
+                              <th scope="col-sm-2">Project</th>
+                              <th scope="col-sm-2">ID</th>
+                              <th scope="col-sm-2">Name</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>BSW Solutions</td>
+                              <td>
+                                <a>125377</a>
+                              </td>
+                              <td>
+                                <a href="view.html?wi=3" target="_blank"> Create UI Mockups html ver1</a>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>BSW Solutions</td>
+                              <td>
+                                <a>126308</a>
+                              </td>
+                              <td>
+                                <a href="view.html?wi=3" target="_blank"> Update mockup prototype ver 1</a>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>BSW Solutions</td>
+                              <td>
+                                <a>127327</a>
+                              </td>
+                              <td>
+                                <a href="view.html?wi=3" target="_blank"> Update result mockup prototype ver 1</a>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="p-2 bd-highlight">
+                  <hr>
+                  <div id="node1-dom" class="group-object">
+                    <div class="panel panel-default">
+                      <div class="panel-heading">WI 1</div>
+                      <div class="panel-body">
+                        <table class="table table-hover">
+                          <thead class="thead-light">
+                            <tr>
+                              <th scope="col-sm-2">Project</th>
+                              <th scope="col-sm-2">ID</th>
+                              <th scope="col-sm-2">Name</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>BSW Solutions</td>
+                              <td>
+                                <a>124696</a>
+                              </td>
+                              <td>
+                                <a href="view.html?wi=1" target="_blank"> Sprint 1</a>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="panel panel-default arrow">
+                      <div class="panel-body">Childern, track</div>
+                    </div>
+                    <div class="panel panel-default">
+                      <div class="panel-heading">WI 2</div>
+                      <div class="panel-body">
+                        <table class="table table-hover">
+                          <thead class="thead-light">
+                            <tr>
+                              <th scope="col-sm-2">Project</th>
+                              <th scope="col-sm-2">ID</th>
+                              <th scope="col-sm-2">Name</th>
+                              <th scope="col-sm-2">Status</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>BSW Solutions</td>
+                              <td>
+                                <a>122777</a>
+                              </td>
+                              <td>
+                                <a href="view.html?wi=2" target="_blank"> project structure and delivery</a>
+                              </td>
+                              <td>
+                                <a>New</a>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="panel panel-default arrow">
+                      <div class="panel-body">Childern, track</div>
+                    </div>
+                    <div class="panel panel-default">
+                      <div class="panel-heading">WI 3</div>
+                      <div class="panel-body">
+                        <table class="table table-hover">
+                          <thead class="thead-light">
+                            <tr>
+                              <th scope="col-sm-2">Project</th>
+                              <th scope="col-sm-2">ID</th>
+                              <th scope="col-sm-2">Name</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>BSW Solutions</td>
+                              <td>
+                                <a>123536</a>
+                              </td>
+                              <td>
+                                <a href="view.html?wi=3" target="_blank"> AOP logging for project</a>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>BSW Solutions</td>
+                              <td>
+                                <a>124823</a>
+                              </td>
+                              <td>
+                                <a href="view.html?wi=3" target="_blank"> project structure</a>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="query-diagram-area2">
+              <div class="d-flex flex-column bd-highlight mb-3">
+                <div class="p-2 bd-highlight">
+                  <div id="node1-dom" class="group-object">
+                    <div class="panel panel-default">
+                      <div class="panel-heading">WI 2</div>
+                      <div class="panel-body">
+                        <table class="table table-hover">
+                          <thead class="thead-light">
+                            <tr>
+                              <th scope="col-sm-2">Project</th>
+                              <th scope="col-sm-2">ID</th>
+                              <th scope="col-sm-2">Name</th>
+                              <th scope="col-sm-2">Status</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>BSW Solutions</td>
+                              <td>
+                                <a>124653</a>
+                              </td>
+                              <td>
+                                <a href="view.html?wi=1" target="_blank"> Create UI Mockups</a>
+                              </td>
+                              <td>
+                                <a>New</a>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="panel panel-default arrow">
+                      <div class="panel-body">Childern, track</div>
+                    </div>
+                    <div id="node3-dom" class="group-object">
+                      <div class="panel panel-default">
+                        <div class="panel-heading">WI 3</div>
+                        <div class="panel-body">
+                          <table class="table table-hover">
+                            <thead class="thead-light">
+                              <tr>
+                                <th scope="col-sm-2">Project</th>
+                                <th scope="col-sm-2">ID</th>
+                                <th scope="col-sm-2">Name</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>BSW Solutions</td>
+                                <td>
+                                  <a>125377</a>
+                                </td>
+                                <td>
+                                  <a href="view.html?wi=3" target="_blank"> Create UI Mockups html ver1</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>BSW Solutions</td>
+                                <td>
+                                  <a>126308</a>
+                                </td>
+                                <td>
+                                  <a href="view.html?wi=3" target="_blank"> Update mockup prototype ver 1</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>BSW Solutions</td>
+                                <td>
+                                  <a>127327</a>
+                                </td>
+                                <td>
+                                  <a href="view.html?wi=3" target="_blank"> Update result mockup prototype ver 1</a>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="p-2 bd-highlight">
+                  <hr>
+                  <div id="node1-dom" class="group-object">
+                    <div class="panel panel-default">
+                      <div class="panel-heading">WI 2</div>
+                      <div class="panel-body">
+                        <table class="table table-hover">
+                          <thead class="thead-light">
+                            <tr>
+                              <th scope="col-sm-2">Project</th>
+                              <th scope="col-sm-2">ID</th>
+                              <th scope="col-sm-2">Name</th>
+                              <th scope="col-sm-2">Status</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>BSW Solutions</td>
+                              <td>
+                                <a>122777</a>
+                              </td>
+                              <td>
+                                <a href="view.html?wi=1" target="_blank"> project structure and delivery</a>
+                              </td>
+                              <td>
+                                <a>New</a>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="panel panel-default arrow">
+                      <div class="panel-body">Childern, track</div>
+                    </div>
+                    <div id="node3-dom" class="group-object">
+                      <div class="panel panel-default">
+                        <div class="panel-heading">WI 3</div>
+                        <div class="panel-body">
+                          <table class="table table-hover">
+                            <thead class="thead-light">
+                              <tr>
+                                <th scope="col-sm-2">Project</th>
+                                <th scope="col-sm-2">ID</th>
+                                <th scope="col-sm-2">Name</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>BSW Solutions</td>
+                                <td>
+                                  <a>123536</a>
+                                </td>
+                                <td>
+                                  <a href="view.html?wi=3" target="_blank"> AOP logging for project</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>BSW Solutions</td>
+                                <td>
+                                  <a>124823</a>
+                                </td>
+                                <td>
+                                  <a href="view.html?wi=3" target="_blank"> project structure</a>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="p-2 bd-highlight">
+                  <hr>
+                  <div id="node1-dom" class="group-object">
+                    <div class="panel panel-default">
+                      <div class="panel-heading">WI 2</div>
+                      <div class="panel-body">
+                        <table class="table table-hover">
+                          <thead class="thead-light">
+                            <tr>
+                              <th scope="col-sm-2">Project</th>
+                              <th scope="col-sm-2">ID</th>
+                              <th scope="col-sm-2">Name</th>
+                              <th scope="col-sm-2">Status</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>BSW Solutions</td>
+                              <td>
+                                <a>122777</a>
+                              </td>
+                              <td>
+                                <a href="view.html?wi=1" target="_blank"> project structure and delivery</a>
+                              </td>
+                              <td>
+                                New
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>BSW Solutions</td>
+                              <td>
+                                <a>124653</a>
+                              </td>
+                              <td>
+                                <a href="view.html?wi=1" target="_blank"> Create UI Mockups</a>
+                              </td>
+                              <td>
+                                New
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="panel panel-default arrow">
+                      <div class="panel-body">Parent, Contribute</div>
+                    </div>
+                    <div id="node3-dom" class="group-object">
+                      <div class="panel panel-default">
+                        <div class="panel-heading">WI 1</div>
+                        <div class="panel-body">
+                          <table class="table table-hover">
+                            <thead class="thead-light">
+                              <tr>
+                                <th scope="col-sm-2">Project</th>
+                                <th scope="col-sm-2">ID</th>
+                                <th scope="col-sm-2">Name</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>BSW Solutions</td>
+                                <td>
+                                  <a>124696</a>
+                                </td>
+                                <td>
+                                  <a href="view.html?wi=3" target="_blank"> Sprint 1</a>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="query-diagram-area3">
+              <div class="d-flex flex-column bd-highlight mb-3">
+                <div class="p-2 bd-highlight">
+                  <div id="node3-dom" class="group-object">
+                    <div class="panel panel-default">
+                      <div class="panel-heading">WI 3</div>
+                      <div class="panel-body">
+                        <table class="table table-hover">
+                          <thead class="thead-light">
+                            <tr>
+                              <th scope="col-sm-2">Project</th>
+                              <th scope="col-sm-2">ID</th>
+                              <th scope="col-sm-2">Name</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>BSW Solutions</td>
+                              <td>
+                                <a>125377</a>
+                              </td>
+                              <td>
+                                <a href="view.html?wi=3" target="_blank"> Create UI Mockups html ver1</a>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>BSW Solutions</td>
+                              <td>
+                                <a>126308</a>
+                              </td>
+                              <td>
+                                <a href="view.html?wi=3" target="_blank"> Update mockup prototype ver 1</a>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>BSW Solutions</td>
+                              <td>
+                                <a>127327</a>
+                              </td>
+                              <td>
+                                <a href="view.html?wi=3" target="_blank"> Update result mockup prototype ver 1</a>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="panel panel-default arrow">
+                      <div class="panel-body">Parent, Contribute</div>
+                    </div>
+                    <div class="panel panel-default">
+                      <div class="panel-heading">WI 2</div>
+                      <div class="panel-body">
+                        <table class="table table-hover">
+                          <thead class="thead-light">
+                            <tr>
+                              <th scope="col-sm-2">Project</th>
+                              <th scope="col-sm-2">ID</th>
+                              <th scope="col-sm-2">Name</th>
+                              <th scope="col-sm-2">Status</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>BSW Solutions</td>
+                              <td>
+                                <a>124653</a>
+                              </td>
+                              <td>
+                                <a href="view.html?wi=2" target="_blank"> Create UI Mockups</a>
+                              </td>
+                              <td>
+                                <a>New</a>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="panel panel-default arrow">
+                      <div class="panel-body">Parent, Contribute</div>
+                    </div>
+                    <div class="panel panel-default">
+                      <div class="panel-heading">WI 1</div>
+                      <div class="panel-body">
+                        <table class="table table-hover">
+                          <thead class="thead-light">
+                            <tr>
+                              <th scope="col-sm-2">Project</th>
+                              <th scope="col-sm-2">ID</th>
+                              <th scope="col-sm-2">Name</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>BSW Solutions</td>
+                              <td>
+                                <a>124696</a>
+                              </td>
+                              <td>
+                                <a href="view.html?wi=1" target="_blank"> Sprint 1</a>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="p-2 bd-highlight">
+                  <hr>
+                  <div id="node3-dom" class="group-object">
+                    <div class="panel panel-default">
+                      <div class="panel-heading">WI 3</div>
+                      <div class="panel-body">
+                        <table class="table table-hover">
+                          <thead class="thead-light">
+                            <tr>
+                              <th scope="col-sm-2">Project</th>
+                              <th scope="col-sm-2">ID</th>
+                              <th scope="col-sm-2">Name</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>BSW Solutions</td>
+                              <td>
+                                <a>123536</a>
+                              </td>
+                              <td>
+                                <a href="view.html?wi=3" target="_blank"> AOP logging for project</a>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>BSW Solutions</td>
+                              <td>
+                                <a>124823</a>
+                              </td>
+                              <td>
+                                <a href="view.html?wi=3" target="_blank"> project structure</a>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="panel panel-default arrow">
+                      <div class="panel-body">Parent, Contribute</div>
+                    </div>
+                    <div class="panel panel-default">
+                      <div class="panel-heading">WI 2</div>
+                      <div class="panel-body">
+                        <table class="table table-hover">
+                          <thead class="thead-light">
+                            <tr>
+                              <th scope="col-sm-2">Project</th>
+                              <th scope="col-sm-2">ID</th>
+                              <th scope="col-sm-2">Name</th>
+                              <th scope="col-sm-2">Status</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>BSW Solutions</td>
+                              <td>
+                                <a>122777</a>
+                              </td>
+                              <td>
+                                <a href="view.html?wi=2" target="_blank"> project structure and delivery</a>
+                              </td>
+                              <td>
+                                <a>New</a>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="panel panel-default arrow">
+                      <div class="panel-body">Parent, Contribute</div>
+                    </div>
+                    <div class="panel panel-default">
+                      <div class="panel-heading">WI 1</div>
+                      <div class="panel-body">
+                        <table class="table table-hover">
+                          <thead class="thead-light">
+                            <tr>
+                              <th scope="col-sm-2">Project</th>
+                              <th scope="col-sm-2">ID</th>
+                              <th scope="col-sm-2">Name</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>BSW Solutions</td>
+                              <td>
+                                <a>124696</a>
+                              </td>
+                              <td>
+                                <a href="view.html?wi=1" target="_blank"> Sprint 1</a>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <a class="btn btn-success" [routerLink]="['/preview']" role="button">Back</a>
+    <a class="btn btn-success float-right" [routerLink]="['/']" role="button">Create Report</a>
